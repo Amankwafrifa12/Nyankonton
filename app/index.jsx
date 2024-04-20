@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View, SafeAreaView, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, FlatList} from 'react-native';
 
 export default function App() {
 
@@ -17,8 +17,12 @@ export default function App() {
     ]);
 
   return (
+    
     <View style={styles.container}>
-    <ScrollView>
+      <FlatList 
+      data={places} renderItem={({ item }) => (<Text style={styles.item}>{item.name}</Text>)}/>
+
+    {/* <ScrollView>
       { places.map((item) => {
       return (
         <View key={item.key}>
@@ -26,7 +30,7 @@ export default function App() {
         </View>
       )
     })}
-      </ScrollView>
+      </ScrollView> */}
      </View>
     );
     
