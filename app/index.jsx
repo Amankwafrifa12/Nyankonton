@@ -17,9 +17,9 @@ return(
 <Header />
 
 <View style={styles.container}>
-  <FlatList 
+  <View style={styles.list}><FlatList 
   data={places} 
-  renderItem={({item}) => (<Text>{item.text}</Text>)}/>
+  renderItem={({item}) => (<Text>{item.text}</Text>)}/></View>
 </View>
   </View>
   
@@ -47,5 +47,8 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'center',
     color: 'white',
+  },
+  list: {
+    
   }
 });

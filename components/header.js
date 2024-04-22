@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         margin: 0,
         backgroundColor: 'coral',
-        height: 80,
+        height: 70,
         justifyContent: 'center',
         alignItems: 'center',
 
