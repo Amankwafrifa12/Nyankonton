@@ -1,30 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, FlatList} from 'react-native';
+import Header from '../components/header';
 
 export default function App() {
 
     const [places, setPlaces] = useState([
-      { name: 'Opon-Valley', key: '1'},
-      { name: 'Dunkwa-on-Offin', key: '2'},
-      { name: 'Kumasi', key: '3'},
-      { name: 'Wasa Akropong', key: '4'},
-      { name: 'Accra', key: '5'},
-      { name: 'Winneba', key: '6'},
-      { name: 'Obuasi', key: '7'},
-      { name: 'Cape Coast', key: '8'},
+      { text: 'Opon-Valley', key: '1'},
+      { text: 'Dunkwa-on-Offin', key: '2'},
+      { text: 'Kumasi', key: '3'},
+      
       
     ]);
+return(
+  <View>
+<Header />
 
-  return (
-    
-    <View style={styles.container}>
-      <FlatList 
-      data={places} renderItem={({ item }) => (<TouchableOpacity><Text style={styles.item}>{item.name}</Text></TouchableOpacity>)}/>
+<View style={styles.container}>
+  <FlatList 
+  data={places} 
+  renderItem={({item}) => (<Text>{item.text}</Text>)}/>
+</View>
+  </View>
+  
 
-     </View>
-    );
-    
+  
+);
+  
 }
 
 const styles = StyleSheet.create({
