@@ -16,18 +16,15 @@ const styles = StyleSheet.create({
     header: {
         display: 'flex',
         margin: 0,
-        backgroundColor: 'coral',
-        height: 70,
+        backgroundColor: 'midnightblue',
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-
-        
     },
     title: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 20,
-        textAlign: 'center',
+        fontSize: 16,
     }
     
 })

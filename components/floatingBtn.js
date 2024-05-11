@@ -1,42 +1,22 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Platform, ScrollView, SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Header from '../components/header';
 import Latest from '../components/latest';
 import {MaterialIcons} from '@expo/vector-icons';
-import BottomTab from '../components/tabs';
-import Home from '../screens/Home';
-import About from '../screens/About';
-import Glossary from '../screens/Glossary';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 
-
-
-const Tab = createBottomTabNavigator();
 export default function FloatingBtn() {
-  
   const [visible, setVisible] = useState(false);
 
     const handlePress = ()=>{
-      
         setVisible(!visible);
-
-
     };
 
 return(
-  
   <View style={styles.container}>
-    <Header />
     
-    
-
-    <View style={{}}>
-      <ScrollView><Latest /></ScrollView>
-    </View>
         <TouchableOpacity onPress={handlePress} style={styles.floatingbtn}>
-          <MaterialIcons name='add' size={24} color='white' />
+          <MaterialIcons name='home' size={24} color='white' />
         </TouchableOpacity>
         {visible && (<View style={styles.btnContainer}>
          <TouchableOpacity style={styles.button} >
@@ -54,7 +34,6 @@ return(
         </View>)}
       
     </View>
-     
   
 );
   
@@ -64,8 +43,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    paddingBottom: 10,
-    
+    padding: 10,
   },
   floatingbtn: {
     display: 'flex',
